@@ -1,6 +1,6 @@
 ---
-title: Segments
-description: Use filters to create reusable audiences for studies.
+title: How do I build a reusable audience?
+description: Use filters to create reusable groups of contacts for studies.
 ---
 
 Segments are filtered groups of contacts.
@@ -8,12 +8,12 @@ Segments are filtered groups of contacts.
 Use them when you want to target a reusable audience instead of manually selecting participants each time.
 
 <ProductScreenshot
-  src="/screenshots/product-audit/10-new-segment.png"
-  alt="The Lemma segment builder with a rule builder."
-  caption="Segments are built from rules and can be saved once the filter is defined."
+  src="/screenshots/docs-hq/contacts-segments-builder.png"
+  alt="The Lemma segment builder."
+  caption="Segments are built from rules and saved as reusable audiences for studies."
 />
 
-## What segments are for
+## When To Use Segments
 
 Segments help you send studies to:
 
@@ -24,10 +24,33 @@ Segments help you send studies to:
 - people subscribed to a topic
 - contacts matching custom properties
 
-## Before creating segments
+## Before You Create A Segment
 
 Define useful [properties](/contacts/properties) first. Properties appear automatically in the segment builder.
 
-## Next step
+<HelpCallout type="tip" title="Name segments by intent">
+Use names like "Churned customers - last 90 days" or "Beta users - admin role" so teammates understand when to use the audience.
+</HelpCallout>
+
+## What Good Looks Like
+
+A good segment is:
+
+- reusable across more than one study
+- specific enough to improve answer quality
+- based on stable contact data
+- easy for a teammate to understand
+
+## FAQs & Common Issues
+
+### Should every study use a segment?
+
+No. Use a segment when the audience will be reused or when targeting matters. For a small manual test, a direct link may be enough.
+
+### Why is my segment too broad?
+
+Add properties that describe the participant context you care about, such as role, lifecycle stage, plan tier, region, or customer type.
+
+### What should I read next?
 
 Use [topics](/contacts/topics) when participants should be able to opt in or out of study categories.

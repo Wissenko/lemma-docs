@@ -1,15 +1,5 @@
 {
-  "title": "Design The Study",
+  "title": "Designing Studies",
   "defaultOpen": true,
-  "pages": [
-    "index",
-    "from-a-goal",
-    "choose-format",
-    "choose-follow-up-depth",
-    "write-starter-questions",
-    "guide-follow-ups",
-    "upload-discussion-guide",
-    "use-a-template",
-    "test-your-form"
-  ]
+  "pages": ["index"]
 }

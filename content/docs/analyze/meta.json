@@ -1,5 +1,5 @@
 {
-  "title": "Understand Evidence",
+  "title": "Responses & Evidence",
   "defaultOpen": true,
-  "pages": ["index", "sessions", "transcripts", "research-agent", "reports"]
+  "pages": ["index"]
 }

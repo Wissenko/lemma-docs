@@ -1,5 +1,5 @@
 ---
-title: Properties
+title: How do I store targeting data on contacts?
 description: Store custom attributes on contacts and use them in segments.
 ---
 
@@ -8,12 +8,25 @@ Properties are custom attributes stored on contacts.
 They appear automatically in the segment builder, so they are useful for targeting and organizing audiences.
 
 <ProductScreenshot
-  src="/screenshots/product-audit/08-contact-properties.png"
+  src="/screenshots/docs-hq/contacts-properties-settings.png"
   alt="The Lemma Properties settings screen."
-  caption="Properties let you store extra data on contacts such as age, region, tier, or plan."
+  caption="Properties store structured attributes that can be used for segmentation."
 />
 
-## Property types
+## When To Use Properties
+
+Use properties for stable contact attributes such as:
+
+- role
+- company size
+- plan tier
+- region
+- customer stage
+- beta member
+
+Avoid creating properties for one-off notes that will not be reused.
+
+## Property Types
 
 The audited property form supported:
 
@@ -24,23 +37,20 @@ The audited property form supported:
 - enum
 - text_long
 
-<ProductScreenshot
-  src="/screenshots/product-audit/13-new-property-modal.png"
-  alt="The Lemma New property form."
-  caption="Choose the property type that matches the data you want to store."
-/>
+<HelpCallout type="tip" title="Design properties for future studies">
+Create properties that will help you invite the right audience again, not just describe the current study.
+</HelpCallout>
 
-## Good properties
+## FAQs & Common Issues
 
-Good properties are stable and useful for targeting.
+### Should I create a property for every spreadsheet column?
 
-Examples:
+No. Keep properties focused on fields that help with targeting, segmentation, or analysis context.
 
-- role
-- company_size
-- plan_tier
-- region
-- customer_stage
-- beta_member
+### What is the difference between a property and a topic?
 
-Avoid creating properties for one-off notes that will not be reused.
+Properties are attributes you store on contacts. Topics are subscription categories participants can opt in or out of.
+
+### What should I read next?
+
+Use [segments](/contacts/segments) to turn properties into reusable audiences.

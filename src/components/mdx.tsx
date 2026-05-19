@@ -62,6 +62,53 @@ function Outcome({
   );
 }
 
+function HelpCallout({
+  type = "note",
+  title,
+  children,
+}: {
+  type?: "insight" | "tip" | "note";
+  title?: string;
+  children: ReactNode;
+}) {
+  const styles = {
+    insight: {
+      label: "Insight",
+      border: "border-[#dfe4ff]",
+      bg: "bg-[#f7f8ff]",
+      title: "text-[#2436d9]",
+      body: "text-[#283044]",
+    },
+    tip: {
+      label: "Tip",
+      border: "border-[#d8ead7]",
+      bg: "bg-[#f5fbf4]",
+      title: "text-[#245f2d]",
+      body: "text-[#334c35]",
+    },
+    note: {
+      label: "Note",
+      border: "border-[#e6e3dd]",
+      bg: "bg-[#fbfbf8]",
+      title: "text-[#0a0a0a]",
+      body: "text-[#525252]",
+    },
+  }[type];
+
+  return (
+    <div
+      className={`not-prose my-6 rounded-lg border ${styles.border} ${styles.bg} p-5`}
+    >
+      <div className={`text-sm font-semibold ${styles.title}`}>
+        {title ?? styles.label}
+      </div>
+      <div className={`mt-2 text-sm leading-6 ${styles.body} [&>p]:m-0`}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function ScreenshotSlot({
   title,
   children,
@@ -162,6 +209,7 @@ export function getMDXComponents(components?: MDXComponents) {
     CardsGrid,
     DocCard,
     Outcome,
+    HelpCallout,
     ScreenshotSlot,
     ExampleBlock,
     TwoColumn,

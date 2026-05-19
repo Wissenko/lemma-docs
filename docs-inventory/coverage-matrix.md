@@ -4,43 +4,42 @@ This matrix prevents the docs from drifting into generic advice.
 
 Status values:
 
-- `drafted`: page exists, but may still need product screenshots.
+- `drafted`: page exists, but may still need product or screenshot verification.
 - `verified`: page matches observed product behavior and has screenshot evidence.
-- `missing`: page does not exist yet.
 - `blocked`: needs product access, demo data, or feature confirmation.
 
-| Feature / flow | User question | Docs page | Screenshot evidence | Current status | Gap |
-| --- | --- | --- | --- | --- | --- |
-| What Lemma is | What is this product for? | `/start/what-is-lemma` | None required, product screenshots helpful | drafted | Verify exact product terminology |
-| Quickstart | How do I create my first voice form? | `/start/quickstart` | `atlas-01`, `atlas-05`, `atlas-12` | drafted | Needs real creation and report screenshots |
-| Static form replacement | Which existing form should I rebuild? | `/start/replace-a-static-form` | Optional comparison visual | drafted | Verify product import/rebuild language |
-| Start from a goal | What should I type first? | `/create/from-a-goal` | `atlas-02` | drafted | Needs exact UI label |
-| Starter questions | How should I write opening questions? | `/create/write-starter-questions` | `atlas-03` | drafted | Needs exact UI constraints and examples |
-| Follow-up guidance | How do I tell Lemma what to ask about? | `/create/guide-follow-ups` | `atlas-04` | drafted | Needs exact field behavior |
-| Test form | How do I preview before sharing? | `/create/test-your-form` | `atlas-05` | drafted | Needs test-mode screenshot |
-| Share link | How do I send the form? | `/share/send-a-form-link` | `atlas-06` | missing | Need page and screenshot |
-| Respondent flow | What will respondents see? | `/share/respondent-experience` | `atlas-07`, `atlas-08` | drafted | Needs respondent screenshots and mic copy |
-| Better answers | How do I get higher-quality responses? | `/share/get-better-answers` | Optional | missing | Need page |
-| Mic/browser help | What if voice does not work? | `/share/microphone-and-browser-help` | Browser permission screenshot | missing | Need page and exact support behavior |
-| Response list | Where do completed answers appear? | `/analyze/transcripts` | `atlas-09` | missing | Need page |
-| Summaries | How do I use summaries? | `/analyze/summaries` | Needed | missing | Need page and screenshot |
-| Themes | How do I find patterns? | `/analyze/themes` | `atlas-10` | missing | Need page and screenshot |
-| Quotes | How do I pull customer language? | `/analyze/quotes` | `atlas-11` | missing | Need page and screenshot |
-| Reports | How do I read the report? | `/analyze/reports` | `atlas-12` | drafted | Needs exact report section verification |
-| Templates | Which workflow should I start from? | `/templates` | `atlas-13` | missing | Confirm if templates exist in-app |
-| Credits / usage | How much can I run? | `/account/credits-and-usage` | `atlas-14` | missing | Confirm current billing model |
-| Team members | Can my team collaborate? | `/account/team-members` | `atlas-15` | missing | Confirm live capabilities |
-| Data handling | What happens to responses? | `/trust/data-handling` | Optional | missing | Need product/legal truth |
-| Respondent consent | What should I tell respondents? | `/trust/respondent-consent` | Respondent entry copy | missing | Need exact consent/mic language |
-| Product limits | What should I not expect Lemma to do? | `/reference/product-limits` | None | missing | Use product truth and avoid roadmap claims |
+| User job | Docs page | Screenshot evidence | Current status | Gap |
+| --- | --- | --- | --- | --- |
+| Find the right help page | `/` | `docs-hq/home-dashboard.png` | drafted | Add real search affordance if Fumadocs search is not obvious enough |
+| Get oriented | `/start` | `docs-hq/start-get-oriented-dashboard.png` | drafted | Verify sidebar/product language after next app pass |
+| Create first study | `/start/quickstart` | `docs-hq/start-quickstart-new-study.png` | drafted | Capture full successful create-to-response flow |
+| Understand Lemma | `/start/what-is-lemma` | `docs-hq/start-what-is-lemma-study-tabs.png` | drafted | Confirm final public terminology for outputs |
+| Navigate app | `/start/navigate-lemma` | `docs-hq/start-navigate-lemma-sidebar.png` | drafted | Verify current sidebar labels |
+| Design study | `/create` | `docs-hq/create-design-study-new-study.png` | drafted | Add more concrete examples after template strategy is stable |
+| Choose audience | `/contacts` | `docs-hq/contacts-index.png` | drafted | Verify distribution behavior from contacts/segments |
+| Build reusable audience | `/contacts/segments` | `docs-hq/contacts-segments-builder.png` | drafted | Confirm available filters and operators |
+| Import contacts | `/contacts/import-contacts` | `docs-hq/contacts-import-contacts.png` | drafted | Confirm import validation/error states |
+| Add contact manually | `/contacts/add-contact` | `docs-hq/contacts-add-contact.png` | drafted | Confirm required fields |
+| Manage participant topics | `/contacts/topics` | `docs-hq/contacts-topics-settings.png` | drafted | Confirm participant-facing topic behavior |
+| Store targeting data | `/contacts/properties` | `docs-hq/contacts-properties-settings.png` | drafted | Confirm property types and where they appear |
+| Launch study | `/share` | `docs-hq/share-launch-overview.png` | drafted | Capture respondent flow from live share link |
+| Review evidence | `/analyze` | `docs-hq/analyze-index-responses.png` | drafted | Capture Doc/Slides export behavior after next pass |
+| Manage workspace | `/account` | `docs-hq/account-index.png` | drafted | Verify current Account & Billing labels |
+| Update workspace settings | `/account/workspace-settings` | `docs-hq/account-workspace-settings.png` | drafted | Confirm org/team split |
+| Manage teammates | `/account/team-members` | `docs-hq/account-team-members.png` | drafted | Confirm roles and permissions |
+| Update profile | `/account/profile` | `docs-hq/account-profile.png` | drafted | Confirm email/password behavior |
+| Manage notifications | `/account/notifications` | `docs-hq/account-notifications.png` | drafted | Confirm notification delivery behavior |
+| Understand credits and usage | `/account/credits-and-usage` | `docs-hq/account-credits-usage.png` | drafted | Confirm exact credit consumption rules |
 
-## Definition Of Done For A Feature
+## Definition Of Done For A Page
 
-A feature is documented when:
+A page is documented when:
 
-1. Its page answers the user's actual job.
-2. The page names what Lemma does especially well at that step.
-3. The page avoids claiming unsupported parity with Typeform or Google Forms.
-4. At least one screenshot exists or the reason for not using one is explicit.
-5. Product terminology matches the current app.
-6. The feature's status is live, partial, or roadmap-safe.
+1. Its title is written as the user's question or a clear collection name.
+2. It answers the user's actual job in plain language.
+3. It names what Lemma does especially well at that step.
+4. It avoids claiming unsupported parity with Typeform or Google Forms.
+5. It includes exactly one high-quality product screenshot unless there is a deliberate exception.
+6. It includes FAQs & Common Issues.
+7. It points to the next likely user action.
+8. Product terminology matches the current app.

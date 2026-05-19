@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Lemma Docs",
-    template: "%s | Lemma Docs",
+    default: "Lemma Help Center",
+    template: "%s | Lemma Help Center",
   },
   description:
-    "Self-serve documentation for creating adaptive Lemma voice forms, sharing them with respondents, and using transcripts, themes, quotes, and reports.",
+    "Self-serve help for designing adaptive Lemma studies, inviting participants, reviewing responses, and turning evidence into decisions.",
   icons: {
     icon: "/favicon.png",
   },

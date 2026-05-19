@@ -1,66 +1,113 @@
 ---
-title: Design the study
+title: How do I design a study that gets useful answers?
 description: Turn a business question into an adaptive text or voice study with useful follow-ups.
 ---
 
 Design work in Lemma starts with the decision you want to support, then turns that decision into a study participants can complete without a live interviewer.
 
-<Outcome title="Design principle">
-A good Lemma study does not ask every possible question. It gives the AI interviewer enough context to pursue useful reasons, examples, objections, tradeoffs, and quotes.
-</Outcome>
+<ProductScreenshot
+  src="/screenshots/docs-hq/create-design-study-new-study.png"
+  alt="The Lemma Create Study screen."
+  caption="The New Study screen brings together format, follow-up depth, context, guide upload, and templates."
+/>
 
-## Choose A Starting Point
+<HelpCallout type="insight" title="A good study is not a long survey">
+A good Lemma study gives the AI interviewer enough context to pursue useful reasons, examples, objections, tradeoffs, and quotes.
+</HelpCallout>
 
-<CardsGrid>
-  <DocCard href="/create/from-a-goal" title="Start from a goal" label="Recommended">
-    Write what you want to learn, who should answer, and what decision the study should support.
-  </DocCard>
-  <DocCard href="/create/use-a-template" title="Use a template">
-    Start faster from common workflows like discovery, satisfaction, product feedback, or employee experience.
-  </DocCard>
-  <DocCard href="/create/upload-discussion-guide" title="Upload a discussion guide">
-    Bring an existing PDF guide into Lemma when you already have a research plan.
-  </DocCard>
-  <DocCard href="/create/write-starter-questions" title="Write starter questions">
-    Give the interview enough structure without flattening it into a static form.
-  </DocCard>
-</CardsGrid>
+## Before You Start
 
-## Make The Key Design Choices
+Finish this sentence:
+
+> We need these responses so we can decide...
+
+Good study goals name:
+
+- the audience
+- the situation they experienced
+- the decision your team needs to make
+- the evidence that would change the decision
+
+For example: understand why recently churned customers cancelled, what they tried before leaving, and what would have changed their decision.
+
+## How To Design The Study
 
 <Steps>
 <Step>
 
-### Choose text or voice
+### Step 1: Choose text or voice
 
-Voice is better when tone, story, hesitation, and detail matter. Text is better when participants need a quieter or lower-friction written path.
-
-</Step>
-<Step>
-
-### Choose follow-up depth
-
-Quick pulse is for a light signal. Standard interview is the default. Deep dive is for higher-stakes decisions that need more probing.
+Use **voice conversation** when stories, nuance, emotion, hesitation, or long qualitative answers matter. Use **text conversation** when participants need a quieter, lower-friction written path.
 
 </Step>
 <Step>
 
-### Guide the follow-ups
+### Step 2: Choose follow-up depth
 
-Tell Lemma what counts as useful evidence. Ask for examples, constraints, failed attempts, tradeoffs, or the next action you need to decide.
+Use **Quick pulse** for a fast signal, **Standard interview** for most research and feedback studies, and **Deep dive** when the decision needs richer probing.
 
 </Step>
 <Step>
 
-### Test before sharing
+### Step 3: Add context or a guide
 
-Preview the experience and check whether the prompts would produce usable evidence, not just complete responses.
+Use the brain dump field when you know the goal but have not written a guide. Upload a discussion guide when you already have a structured research plan.
+
+</Step>
+<Step>
+
+### Step 4: Use a template when the workflow is familiar
+
+Templates are useful for common workflows like customer discovery, satisfaction, product or service feedback, and employee experience.
+
+</Step>
+<Step>
+
+### Step 5: Shape the starter questions
+
+Starter questions should invite a story, reason, example, expectation, or tradeoff. They should not flatten the study into a static survey.
+
+</Step>
+<Step>
+
+### Step 6: Guide the follow-ups
+
+Tell Lemma what counts as useful depth. Ask it to follow up on concrete examples, failed workarounds, objections, switching moments, constraints, or next steps.
 
 </Step>
 </Steps>
 
-<ProductScreenshot
-  src="/screenshots/product-audit/14-new-study-format-menu.png"
-  alt="The Lemma study format menu with text conversation and voice conversation options."
-  caption="Format is a product decision, not just a UI preference: choose the mode that gets the richest useful answer from this audience."
-/>
+## What Good Looks Like
+
+By the time you launch, the study should make clear:
+
+- who should answer
+- what decision the study supports
+- whether participants answer by text or voice
+- how much probing Lemma should do
+- what details are worth following up on
+- what output the team needs after responses come in
+
+<HelpCallout type="tip" title="Check the first question">
+If the first question could belong in any generic survey, tighten the study goal before launching.
+</HelpCallout>
+
+## FAQs & Common Issues
+
+### What if I only have a rough idea?
+
+Use the brain dump field. Include the audience, the decision, what you already know, what you are unsure about, and what a useful answer would include.
+
+### Should I ask demographic questions first?
+
+Only ask them if they affect the decision. If the audience is already known through Contacts or Segments, keep the participant flow focused on the evidence you need.
+
+### How do I avoid shallow answers?
+
+Ask for examples, recent moments, attempted workarounds, constraints, tradeoffs, and what changed. Avoid yes-or-no questions unless the follow-up is the real point.
+
+## Related Articles
+
+- [How do I launch a study?](/share)
+- [How do I choose who to invite?](/contacts)
+- [How do I review responses and understand the evidence?](/analyze)

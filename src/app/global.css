@@ -34,3 +34,106 @@ body {
   font-size: 1.05rem;
   line-height: 1.75;
 }
+
+.lemma-article {
+  color: var(--lemma-ink);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.lemma-article > *:first-child {
+  margin-top: 0;
+}
+
+.lemma-article h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  border-top: 1px solid var(--lemma-border);
+  padding-top: 2rem;
+  color: var(--lemma-ink);
+  font-size: 1.55rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.lemma-article h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.45rem;
+  color: var(--lemma-ink);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.lemma-article h4 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.35rem;
+  color: var(--lemma-ink);
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.lemma-article p,
+.lemma-article ul,
+.lemma-article ol,
+.lemma-article blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lemma-article p,
+.lemma-article li {
+  color: var(--lemma-muted);
+}
+
+.lemma-article ul,
+.lemma-article ol {
+  padding-left: 1.35rem;
+}
+
+.lemma-article ul {
+  list-style: disc;
+}
+
+.lemma-article ol {
+  list-style: decimal;
+}
+
+.lemma-article li + li {
+  margin-top: 0.35rem;
+}
+
+.lemma-article a {
+  color: #2436d9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lemma-article a:hover {
+  color: var(--lemma-ink);
+}
+
+.lemma-article blockquote {
+  border-left: 3px solid #3d50ff;
+  background: #f7f8ff;
+  padding: 0.9rem 1rem;
+  color: #283044;
+}
+
+.lemma-article blockquote p {
+  color: #283044;
+}
+
+.lemma-article code {
+  border: 1px solid var(--lemma-border);
+  border-radius: 0.35rem;
+  background: #fbfbf8;
+  padding: 0.1rem 0.3rem;
+  color: var(--lemma-ink);
+  font-size: 0.9em;
+}
+
+.lemma-article [data-card] {
+  color: inherit;
+  font-weight: inherit;
+}

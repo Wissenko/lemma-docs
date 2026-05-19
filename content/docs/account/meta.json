@@ -1,5 +1,5 @@
 {
-  "title": "Operate Workspace",
+  "title": "Workspace & Account",
   "defaultOpen": true,
   "pages": [
     "index",
@@ -7,7 +7,6 @@
     "team-members",
     "profile",
     "notifications",
-    "credits-and-usage",
-    "plans-and-billing"
+    "credits-and-usage"
   ]
 }

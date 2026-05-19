@@ -1,5 +1,5 @@
 ---
-title: Topics
+title: How do I manage participant topics?
 description: Define subscription categories participants can opt in or out of.
 ---
 
@@ -8,12 +8,22 @@ Topics are subscription categories for participants.
 The app describes them as categories participants can opt in or out of. Distribution can use topics to gate sends to relevant audiences only.
 
 <ProductScreenshot
-  src="/screenshots/product-audit/07-contact-topics.png"
+  src="/screenshots/docs-hq/contacts-topics-settings.png"
   alt="The Lemma Topics settings screen."
-  caption="Topics are useful when different contacts should receive different kinds of studies."
+  caption="Topics define subscription categories participants can opt in or out of."
 />
 
-## Create a topic
+## When To Use Topics
+
+Use topics when you need subscription-style categories such as:
+
+- UX research
+- pricing
+- beta programs
+- customer stories
+- product feedback
+
+## How To Create A Topic
 
 The topic form includes:
 
@@ -21,19 +31,20 @@ The topic form includes:
 - label
 - description
 
-<ProductScreenshot
-  src="/screenshots/product-audit/12-new-topic-modal.png"
-  alt="The Lemma New topic form."
-  caption="Use a stable key and a human-readable label for each topic."
-/>
+<HelpCallout type="note" title="Topics are not the same as properties">
+Use topics for participant subscription categories. Use properties for structured attributes that live on a contact record.
+</HelpCallout>
 
-## Examples
+## FAQs & Common Issues
 
-- `ux-research`
-- `pricing`
-- `beta`
-- `customer-stories`
+### Should topics describe the study or the person?
 
-## Next step
+Topics should describe the kind of communication or study category a participant can opt in or out of.
 
-Use [properties](/contacts/properties) for attributes that should live on a contact record.
+### What are good topic keys?
+
+Use stable, readable keys like `ux-research`, `pricing`, `beta`, or `customer-stories`.
+
+### What should I use for targeting attributes?
+
+Use [properties](/contacts/properties) for attributes such as role, company size, plan tier, or region.

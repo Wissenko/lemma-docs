@@ -1,30 +1,17 @@
 ---
-title: Import contacts
+title: How do I import contacts?
 description: Upload a spreadsheet to bring contacts into Lemma.
 ---
 
 Use import when you already have a list of participants.
 
 <ProductScreenshot
-  src="/screenshots/product-audit/11-import-csv.png"
+  src="/screenshots/docs-hq/contacts-import-contacts.png"
   alt="The Lemma Import contacts screen."
-  caption="Lemma supports spreadsheet imports and suggests a column mapping before merging contacts into the workspace."
+  caption="Use import when you need to bring a participant list into Lemma."
 />
 
-## Supported files
-
-The import screen accepts:
-
-- CSV
-- TSV
-- XLSX
-- XLS
-- XLSB
-- ODS
-
-The observed limit was up to **5000 rows per sheet**.
-
-## What to prepare
+## Before You Import
 
 At minimum, include an email column.
 
@@ -38,10 +25,37 @@ Recommended columns:
 - company
 - segment or audience label
 
-## After import
+## Supported Files
+
+The import screen accepts:
+
+- CSV
+- TSV
+- XLSX
+- XLS
+- XLSB
+- ODS
+
+The observed limit was up to **5000 rows per sheet**.
+
+<HelpCallout type="tip" title="Prepare reusable columns">
+If you already know how you will target studies, add those fields before importing. They can become properties and segment filters later.
+</HelpCallout>
+
+## After Import
 
 Use segments, topics, and properties to organize contacts for future studies.
 
-## Next step
+## FAQs & Common Issues
+
+### What column is required?
+
+Use email as the minimum identifier unless your workspace has a different verified import rule.
+
+### Should I clean the list before importing?
+
+Yes. Remove duplicates, obvious test records, and columns you will not use for targeting or context.
+
+### What should I do after import?
 
 Create [properties](/contacts/properties) for custom fields you want to reuse.

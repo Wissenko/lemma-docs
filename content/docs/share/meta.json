@@ -1,5 +1,5 @@
 {
-  "title": "Launch And Collect",
+  "title": "Launching Studies",
   "defaultOpen": true,
-  "pages": ["index", "send-a-study-link", "respondent-experience"]
+  "pages": ["index"]
 }

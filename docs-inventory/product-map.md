@@ -3,33 +3,32 @@
 Status values:
 
 - `verified`: observed in the app during a product audit.
-- `expected`: expected from current Lemma context, but not yet verified in the app.
+- `drafted`: documented from observed product evidence, but still needs another verification pass.
 - `unclear`: seen or inferred, but behavior needs confirmation.
-- `missing-doc`: feature exists or likely exists, but docs coverage is not written yet.
 
 ## Product Areas
 
 | Product area | Screen / flow | User job | What Lemma does well | Evidence | Docs page | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| App entry | Dashboard / workspace home | Find existing forms and start the next action | Should make form creation and report access obvious | Needed | `/start/quickstart` | expected |
-| Creation | New voice form / study creation | Start a new adaptive voice form | Turns a blank start into a guided setup | `atlas-01` | `/start/quickstart` | expected |
-| Creation | Goal input | Define the business question the voice form should answer | Starts from a decision, not a generic survey | `atlas-02` | `/create/from-a-goal` | expected |
-| Creation | Starter questions | Give the respondent a strong opening path | Combines form-like structure with interview-like depth | `atlas-03` | `/create/write-starter-questions` | expected |
-| Creation | Follow-up guidance | Tell Lemma what to listen for | Differentiates Lemma from static forms by surfacing reasons, examples, objections, and tradeoffs | `atlas-04` | `/create/guide-follow-ups` | expected |
-| Creation | Preview / test mode | Validate the voice form before sharing it | Lets the creator catch vague prompts and weak follow-ups | `atlas-05` | `/create/test-your-form` | expected |
-| Sharing | Share link | Send the form to respondents | Keeps distribution as easy as a normal form link | `atlas-06` | `/share/send-a-form-link` | missing-doc |
-| Respondent flow | Respondent landing page | Understand what will happen before answering | Sets expectations for voice, timing, and follow-up questions | `atlas-07` | `/share/respondent-experience` | expected |
-| Respondent flow | Voice conversation in progress | Answer naturally and respond to follow-ups | Makes qualitative feedback feel like a short guided conversation | `atlas-08` | `/share/respondent-experience` | expected |
-| Response review | Response list | See who responded and inspect individual answers | Should connect raw responses to usable evidence | Needed | `/analyze/transcripts` | missing-doc |
-| Response review | Transcript view | Verify what a respondent actually said | Keeps insights transcript-grounded | `atlas-09` | `/analyze/transcripts` | missing-doc |
-| Analysis | Summary view | Understand each response quickly | Reduces manual review work | Needed | `/analyze/summaries` | missing-doc |
-| Analysis | Themes | Find repeated patterns across responses | Turns conversations into decision evidence | `atlas-10` | `/analyze/themes` | missing-doc |
-| Analysis | Quotes | Capture exact respondent language | Preserves customer words for product, sales, and marketing use | `atlas-11` | `/analyze/quotes` | missing-doc |
-| Analysis | Report | Read a decision-ready output | Combines summary, themes, quotes, and next actions | `atlas-12` | `/analyze/reports` | expected |
-| Templates | Template selection | Start from a known workflow | Helps users avoid a blank prompt | Needed | `/templates` | missing-doc |
-| Account | Credits / usage | Understand available usage | Helps users know whether they can run more forms | Needed | `/account/credits-and-usage` | missing-doc |
-| Account | Team members | Invite or manage collaborators | Supports team adoption | Needed | `/account/team-members` | missing-doc |
-| Trust | Consent / data handling surfaces | Understand what respondents and teams should expect | Builds confidence around voice responses and transcripts | Needed | `/trust/respondent-consent` | missing-doc |
+| App entry | Studies dashboard | Find existing studies and start the next action | Gives users a home base for repeated research workflows | `docs-hq/home-dashboard.png` | `/` | drafted |
+| Getting started | New Study screen | Create a first study | Turns a blank start into a guided setup | `docs-hq/start-quickstart-new-study.png` | `/start/quickstart` | drafted |
+| Product model | Study tabs | Understand studies, sessions, responses, and outputs | Connects participant sessions to analysis and shareable outputs | `docs-hq/start-what-is-lemma-study-tabs.png` | `/start/what-is-lemma` | drafted |
+| Navigation | Sidebar | Find the right product area | Makes studies, contacts, workspace, and account controls discoverable | `docs-hq/start-navigate-lemma-sidebar.png` | `/start/navigate-lemma` | drafted |
+| Study design | New Study screen | Design a study that gets useful answers | Combines format, follow-up depth, context, guide upload, and templates | `docs-hq/create-design-study-new-study.png` | `/create` | drafted |
+| Contacts | Contacts index | Choose who to invite | Centralizes participants, imports, segments, topics, and properties | `docs-hq/contacts-index.png` | `/contacts` | drafted |
+| Contacts | Segment builder | Build reusable audiences | Uses rules and contact data for repeatable targeting | `docs-hq/contacts-segments-builder.png` | `/contacts/segments` | drafted |
+| Contacts | Import contacts | Bring a participant list into Lemma | Supports spreadsheet-based audience setup | `docs-hq/contacts-import-contacts.png` | `/contacts/import-contacts` | drafted |
+| Contacts | Add contact | Add one participant manually | Supports lightweight one-off audience setup | `docs-hq/contacts-add-contact.png` | `/contacts/add-contact` | drafted |
+| Contacts | Topics settings | Manage participant subscription topics | Separates subscription categories from contact attributes | `docs-hq/contacts-topics-settings.png` | `/contacts/topics` | drafted |
+| Contacts | Properties settings | Store targeting attributes | Makes custom fields available for segmentation | `docs-hq/contacts-properties-settings.png` | `/contacts/properties` | drafted |
+| Launching | Study overview | Share and monitor a study | Keeps distribution close to the study workspace | `docs-hq/share-launch-overview.png` | `/share` | drafted |
+| Evidence | Responses table | Review participant sessions | Starts analysis from source evidence | `docs-hq/analyze-index-responses.png` | `/analyze` | drafted |
+| Workspace | Account overview | Manage workspace operations | Groups profile, notifications, credits, and usage controls | `docs-hq/account-index.png` | `/account` | drafted |
+| Workspace | Workspace settings | Update organization details | Separates shared workspace settings from profile settings | `docs-hq/account-workspace-settings.png` | `/account/workspace-settings` | drafted |
+| Workspace | Team members | Invite and manage teammates | Supports collaboration around studies and evidence | `docs-hq/account-team-members.png` | `/account/team-members` | drafted |
+| Workspace | Profile | Update personal profile | Keeps personal account details separate from workspace settings | `docs-hq/account-profile.png` | `/account/profile` | drafted |
+| Workspace | Notifications | Configure alerts | Helps study owners monitor responses and credit events | `docs-hq/account-notifications.png` | `/account/notifications` | drafted |
+| Workspace | Credits and usage | Understand available usage | Helps users plan text and voice study volume | `docs-hq/account-credits-usage.png` | `/account/credits-and-usage` | drafted |
 
 ## Audit Questions
 
@@ -45,7 +44,6 @@ For each feature, answer:
 ## Gaps To Resolve In App
 
 - Exact creation flow labels.
-- Whether the product calls objects "forms", "studies", "interviews", or another term.
 - Whether templates are live in-app or only planned for website/docs.
 - Exact available report sections.
 - Whether shareable report links are live.

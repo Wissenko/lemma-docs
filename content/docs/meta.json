@@ -1,5 +1,5 @@
 {
-  "title": "Lemma Docs",
+  "title": "Lemma Help Center",
   "pages": [
     "index",
     "start",
@@ -7,8 +7,6 @@
     "contacts",
     "share",
     "analyze",
-    "outputs",
-    "account",
-    "reference"
+    "account"
   ]
 }

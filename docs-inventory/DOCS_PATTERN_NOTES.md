@@ -6,6 +6,9 @@ These notes capture the public documentation patterns used for the current Lemma
 
 ## Sources Reviewed
 
+- Gamma Help Center: https://help.gamma.app/en/
+- Gamma article example: https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma
+- Gamma troubleshooting example: https://help.gamma.app/en/articles/12805003-gamma-api-troubleshooting
 - Stripe quickstarts: https://docs.stripe.com/quickstarts
 - Typeform first-form guide: https://help.typeform.com/hc/en-us/articles/360053660271-My-first-form
 - Linear docs home: https://linear.app/docs
@@ -14,39 +17,47 @@ These notes capture the public documentation patterns used for the current Lemma
 - Notion getting started category: https://www.notion.com/en-gb/help/category/new-to-notion
 - Vercel getting started guide: https://vercel.com/docs/getting-started-with-vercel
 
-## Adopted Patterns
+## Gamma Pattern Audit
 
-1. Lead with first value.
-   - Stripe and Vercel make the first successful workflow explicit.
-   - Lemma docs now send new users first to "Run your first study".
+Gamma's Help Center is optimized for non-technical end users:
 
-2. Organize by jobs before product surfaces.
-   - Intercom and Slack expose setup and getting-started flows before deep feature lookup.
-   - Lemma sections now map to user intent: get oriented, design, reach, launch, understand, share, operate, reference.
+1. The homepage is search-first, then organized into clear user-facing collections.
+2. Collections use plain jobs and product areas: basics, editing, AI generation, sharing, websites, integrations, accounts, billing, security, troubleshooting, and community tips.
+3. Article titles are mostly questions: "How do I...", "What is...", "Can I...", "Why isn't...".
+4. Articles use a repeatable template: short answer, introduction, explanation, numbered steps, screenshots, callouts, FAQs, related articles, and feedback.
+5. Screenshots are tied to the step or product surface being explained.
+6. Most articles include "FAQs & Common Issues" even when the main body already explains the feature.
+7. Troubleshooting pages are symptom-first: what happened, why it happens, what to try next.
 
-3. Preserve reference, but keep it downstream.
-   - Linear and Vercel keep broad reference depth, but users can start from popular or getting-started paths.
-   - Lemma keeps product terms, limits, and known gaps as lookup pages.
+## Lemma Translation
 
-4. Use product examples to lower ambiguity.
-   - Typeform and Slack rely heavily on UI screenshots and walkthroughs.
-   - Lemma uses real desktop screenshots from the product audit where they do not expose private workspace details.
+Lemma should borrow Gamma's operating system, not its exact IA.
 
-5. Separate outcome guidance from exact controls.
-   - The docs should tell users when to use voice, follow-up depth, segments, Research Agent, Doc, or Slides.
-   - Control-level pages remain, but they live under an outcome-oriented section.
+Current docs recipe:
 
-## Lemma IA Decision
+1. Use question titles for pages where the user has a concrete job.
+2. Keep collections compact: Getting Started, Designing Studies, Contacts & Audiences, Launching Studies, Responses & Evidence, Workspace & Account.
+3. Give every public docs page one high-quality product screenshot by default.
+4. Add "FAQs & Common Issues" to every page.
+5. Use callouts consistently:
+   - `insight`: why the workflow matters for better evidence
+   - `tip`: how to do the job better or faster
+   - `note`: product limits, unverified behavior, permissions, credits, or account details
+6. End workflow pages with related articles that point to the next likely action.
+7. Keep Lemma more opinionated than Gamma: every page should help users get better evidence, not merely locate a control.
 
-The docs should not read like a library of features. The top-level story is:
+## Current Lemma IA
 
-1. Get oriented.
-2. Design the study.
-3. Reach the right people.
-4. Launch and collect.
-5. Understand evidence.
-6. Share findings.
-7. Operate the workspace.
-8. Reference exact behavior.
+1. Getting Started
+2. Designing Studies
+3. Contacts & Audiences
+4. Launching Studies
+5. Responses & Evidence
+6. Workspace & Account
 
-This preserves discoverability without making the navigation feel like the product sidebar copied into docs.
+Removed from the current docs IA:
+
+- Reference section
+- Replace Static Forms page
+- Plans and Billing page
+- separate output pages for Doc, Slides, and Export
