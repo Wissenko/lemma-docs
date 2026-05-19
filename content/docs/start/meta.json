@@ -1,0 +1,11 @@
+{
+  "title": "Get Oriented",
+  "defaultOpen": true,
+  "pages": [
+    "index",
+    "quickstart",
+    "replace-a-static-form",
+    "what-is-lemma",
+    "navigate-lemma"
+  ]
+}

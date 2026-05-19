@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+:root {
+  --lemma-accent: #3d50ff;
+  --lemma-ink: #0a0a0a;
+  --lemma-muted: #525252;
+  --lemma-border: #e6e3dd;
+  --lemma-soft: #f7f7f4;
+}
+
+html,
+body {
+  background: #ffffff;
+  color: var(--lemma-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #dfe4ff;
+  color: var(--lemma-ink);
+}
+
+.lemma-prose-lede {
+  color: var(--lemma-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}

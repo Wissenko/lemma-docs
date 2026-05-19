@@ -1,0 +1,5 @@
+{
+  "title": "Share Findings",
+  "defaultOpen": true,
+  "pages": ["index", "doc", "slides", "export"]
+}

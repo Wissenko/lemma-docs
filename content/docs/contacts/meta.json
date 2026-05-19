@@ -1,0 +1,12 @@
+{
+  "title": "Reach The Right People",
+  "defaultOpen": true,
+  "pages": [
+    "index",
+    "segments",
+    "import-contacts",
+    "add-contact",
+    "topics",
+    "properties"
+  ]
+}

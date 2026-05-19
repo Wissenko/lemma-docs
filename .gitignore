@@ -1,0 +1,17 @@
+.DS_Store
+node_modules/
+.next/
+.source/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Local product audit artifacts that may contain private workspace data.
+docs-inventory/audit-runs/
+public/screenshots/product-audit/03-workspace-settings.png
+public/screenshots/product-audit/04-account-billing.png

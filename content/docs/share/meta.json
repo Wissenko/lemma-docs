@@ -1,0 +1,5 @@
+{
+  "title": "Launch And Collect",
+  "defaultOpen": true,
+  "pages": ["index", "send-a-study-link", "respondent-experience"]
+}

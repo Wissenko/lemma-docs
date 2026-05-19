@@ -1,0 +1,13 @@
+{
+  "title": "Operate Workspace",
+  "defaultOpen": true,
+  "pages": [
+    "index",
+    "workspace-settings",
+    "team-members",
+    "profile",
+    "notifications",
+    "credits-and-usage",
+    "plans-and-billing"
+  ]
+}
