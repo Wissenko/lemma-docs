@@ -1,5 +1,11 @@
 {
-  "title": "Responses & Evidence",
+  "title": "Reviewing Results",
   "defaultOpen": true,
-  "pages": ["index"]
+  "pages": [
+    "index",
+    "responses",
+    "transcripts",
+    "insights",
+    "research"
+  ]
 }

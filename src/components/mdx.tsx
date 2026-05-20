@@ -24,23 +24,27 @@ function DocCard({
   return (
     <Link
       href={href}
-      className="group block rounded-lg border border-[#e6e3dd] bg-white p-4 text-left transition-colors hover:border-[#3d50ff]"
+      className="group grid min-h-28 grid-cols-[minmax(0,1fr)_auto] items-start gap-3 rounded-lg border border-[#e6e3dd] bg-white p-4 text-left transition-colors hover:border-[#3d50ff]"
     >
-      {label ? (
-        <div className="mb-3 text-xs font-medium text-[#3d50ff]">{label}</div>
-      ) : null}
-      <div className="flex items-center justify-between gap-4">
-        <h3 className="m-0 text-base font-semibold text-[#0a0a0a]">{title}</h3>
-        <span
-          aria-hidden="true"
-          className="text-sm text-[#8a8a8a] transition-colors group-hover:text-[#3d50ff]"
-        >
-          →
-        </span>
+      <div className="min-w-0">
+        {label ? (
+          <div className="mb-2 text-xs font-medium leading-4 text-[#3d50ff]">
+            {label}
+          </div>
+        ) : null}
+        <h3 className="m-0 text-[15px] font-semibold leading-5 text-[#0a0a0a]">
+          {title}
+        </h3>
+        <div className="mt-2 text-sm leading-5 text-[#525252] [&>p]:m-0">
+          {children}
+        </div>
       </div>
-      <div className="mt-2 text-sm leading-6 text-[#525252] [&>p]:m-0">
-        {children}
-      </div>
+      <span
+        aria-hidden="true"
+        className="mt-0.5 text-sm leading-5 text-[#8a8a8a] transition-colors group-hover:text-[#3d50ff]"
+      >
+        →
+      </span>
     </Link>
   );
 }
@@ -171,9 +175,11 @@ function TwoColumn({
 
 function Panel({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-lg border border-[#e6e3dd] bg-white p-4">
-      <div className="text-sm font-semibold text-[#0a0a0a]">{title}</div>
-      <div className="mt-2 text-sm leading-6 text-[#525252] [&>p]:m-0">
+    <div className="rounded-md border border-[#e6e3dd] bg-[#fbfbf8] p-4">
+      <div className="text-sm font-semibold leading-5 text-[#0a0a0a]">
+        {title}
+      </div>
+      <div className="mt-1.5 text-sm leading-5 text-[#525252] [&>p]:m-0">
         {children}
       </div>
     </div>

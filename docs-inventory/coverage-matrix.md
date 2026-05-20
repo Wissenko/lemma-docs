@@ -10,26 +10,27 @@ Status values:
 
 | User job | Docs page | Screenshot evidence | Current status | Gap |
 | --- | --- | --- | --- | --- |
-| Find the right help page | `/` | `docs-hq/home-dashboard.png` | drafted | Add real search affordance if Fumadocs search is not obvious enough |
-| Get oriented | `/start` | `docs-hq/start-get-oriented-dashboard.png` | drafted | Verify sidebar/product language after next app pass |
-| Create first study | `/start/quickstart` | `docs-hq/start-quickstart-new-study.png` | drafted | Capture full successful create-to-response flow |
-| Understand Lemma | `/start/what-is-lemma` | `docs-hq/start-what-is-lemma-study-tabs.png` | drafted | Confirm final public terminology for outputs |
-| Navigate app | `/start/navigate-lemma` | `docs-hq/start-navigate-lemma-sidebar.png` | drafted | Verify current sidebar labels |
-| Design study | `/create` | `docs-hq/create-design-study-new-study.png` | drafted | Add more concrete examples after template strategy is stable |
-| Choose audience | `/contacts` | `docs-hq/contacts-index.png` | drafted | Verify distribution behavior from contacts/segments |
-| Build reusable audience | `/contacts/segments` | `docs-hq/contacts-segments-builder.png` | drafted | Confirm available filters and operators |
-| Import contacts | `/contacts/import-contacts` | `docs-hq/contacts-import-contacts.png` | drafted | Confirm import validation/error states |
-| Add contact manually | `/contacts/add-contact` | `docs-hq/contacts-add-contact.png` | drafted | Confirm required fields |
-| Manage participant topics | `/contacts/topics` | `docs-hq/contacts-topics-settings.png` | drafted | Confirm participant-facing topic behavior |
-| Store targeting data | `/contacts/properties` | `docs-hq/contacts-properties-settings.png` | drafted | Confirm property types and where they appear |
-| Launch study | `/share` | `docs-hq/share-launch-overview.png` | drafted | Capture respondent flow from live share link |
-| Review evidence | `/analyze` | `docs-hq/analyze-index-responses.png` | drafted | Capture Doc/Slides export behavior after next pass |
-| Manage workspace | `/account` | `docs-hq/account-index.png` | drafted | Verify current Account & Billing labels |
-| Update workspace settings | `/account/workspace-settings` | `docs-hq/account-workspace-settings.png` | drafted | Confirm org/team split |
-| Manage teammates | `/account/team-members` | `docs-hq/account-team-members.png` | drafted | Confirm roles and permissions |
-| Update profile | `/account/profile` | `docs-hq/account-profile.png` | drafted | Confirm email/password behavior |
-| Manage notifications | `/account/notifications` | `docs-hq/account-notifications.png` | drafted | Confirm notification delivery behavior |
-| Understand credits and usage | `/account/credits-and-usage` | `docs-hq/account-credits-usage.png` | drafted | Confirm exact credit consumption rules |
+| Find the right help page | `/` | `docs-hq/home-dashboard.png` | verified | Watch whether search labels stay clear as more pages return |
+| Get oriented | `/start` | `docs-hq/start-get-oriented-dashboard.png` | verified | None for current public scope |
+| Create first study | `/start/quickstart` | `docs-hq/start-quickstart-new-study.png` | verified | Capture full successful create-to-response flow later |
+| Understand Lemma | `/start/what-is-lemma` | `docs-hq/start-what-is-lemma-study-tabs.png` | verified | None for current public scope |
+| Understand core terms | `/start/how-studies-work` | `docs-hq/start-what-is-lemma-study-tabs.png` | verified | None for current public scope |
+| Browse create guides | `/create` | `docs-hq/create-design-study-new-study.png` | verified | None for current public scope |
+| Create with Smart Builder | `/create/smart-builder` | `docs-hq/create-from-goal-brain-dump.png` | verified | None for current public scope |
+| Choose text or voice | `/create/text-or-voice` | `docs-hq/create-choose-format-menu.png` | verified | None for current public scope |
+| Choose follow-up depth | `/create/follow-up-depth` | `docs-hq/create-choose-depth-menu.png` | verified | None for current public scope |
+| Edit questions and follow-ups | `/create/questions-and-follow-ups` | `docs-hq/create-guide-follow-ups-depth.png` | verified | None for current public scope |
+| Use templates | `/create/templates` | `docs-hq/create-use-template-gallery.png` | verified | None for current public scope |
+| Test a study | `/create/test-study` | `docs-hq/create-test-preview-overview.png` | verified | None for current public scope |
+| Browse results guides | `/analyze` | `docs-hq/analyze-index-responses.png` | verified | None for current public scope |
+| Review responses | `/analyze/responses` | `docs-hq/analyze-sessions-table.png` | verified | None for current public scope |
+| Use transcripts | `/analyze/transcripts` | `docs-hq/analyze-transcript-view.png` | verified | None for current public scope |
+| Read Insights | `/analyze/insights` | `docs-hq/analyze-reports-overview.png` | verified | None for current public scope |
+| Ask questions in Research | `/analyze/research` | `docs-hq/analyze-research-agent-chat.png` | verified | Recapture if the tab label or UI changes |
+
+## Private Drafts
+
+The former Contacts, Launch, Workspace, Account, Billing, and navigation pages are intentionally outside `content/docs` for now. They live in `docs-inventory/private-drafts/` until those areas should become public.
 
 ## Definition Of Done For A Page
 

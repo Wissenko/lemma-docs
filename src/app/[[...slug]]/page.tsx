@@ -13,6 +13,19 @@ import { source } from "@/lib/source";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
+
+const retiredPublicSections = new Set([
+  "account",
+  "contacts",
+  "share",
+]);
+
+function isRetiredPath(slugs?: string[]) {
+  if (!slugs || slugs.length === 0) return false;
+  if (retiredPublicSections.has(slugs[0])) return true;
+  return slugs[0] === "start" && slugs[1] === "navigate-lemma";
+}
 
 function getHelpArticles(): HelpArticle[] {
   return source
@@ -31,6 +44,7 @@ export default async function Page(props: {
 }) {
   const params = await props.params;
   const page = source.getPage(params.slug);
+  if (!page && isRetiredPath(params.slug)) redirect("/");
   if (!page) notFound();
 
   const articles = getHelpArticles();
@@ -87,6 +101,14 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params;
   const page = source.getPage(params.slug);
+  if (!page && isRetiredPath(params.slug)) {
+    return {
+      title: {
+        absolute: "Lemma Help Center",
+      },
+      description: "Find practical answers for creating studies and reviewing results in Lemma.",
+    };
+  }
   if (!page) notFound();
 
   return {

@@ -8,9 +8,6 @@ import {
   ChevronRight,
   ClipboardList,
   FileText,
-  Rocket,
-  Settings,
-  Users,
 } from "lucide-react";
 import type { TableOfContents } from "fumadocs-core/toc";
 import { HelpSearchButton } from "@/components/help-search";
@@ -38,50 +35,26 @@ const collectionConfigs = [
   {
     slug: "start",
     title: "Getting Started",
-    label: "Start here",
-    description: "Understand Lemma, create a first study, and orient your team.",
+    label: "Getting Started",
+    description: "Learn the basic terms and create your first study.",
     intent: "New users",
     icon: BookOpen,
   },
   {
     slug: "create",
-    title: "Design the Study",
-    label: "Design",
-    description: "Turn a business question into an adaptive text or voice study.",
-    intent: "Study setup",
+    title: "Creating Studies",
+    label: "Creating Studies",
+    description: "Use Smart Builder, templates, follow-ups, and testing.",
+    intent: "Study creation",
     icon: ClipboardList,
   },
   {
-    slug: "contacts",
-    title: "Contacts & Audiences",
-    label: "Audience",
-    description: "Import contacts, build segments, and target the right participants.",
-    intent: "Participant targeting",
-    icon: Users,
-  },
-  {
-    slug: "share",
-    title: "Launch the Study",
-    label: "Launch",
-    description: "Share the right link, set expectations, and monitor collection.",
-    intent: "Distribution",
-    icon: Rocket,
-  },
-  {
     slug: "analyze",
-    title: "Responses & Evidence",
-    label: "Analyze",
-    description: "Review sessions, transcripts, Research Agent, Doc, Slides, and exports.",
-    intent: "Evidence review",
+    title: "Reviewing Results",
+    label: "Reviewing Results",
+    description: "Review responses, transcripts, Insights, and Research.",
+    intent: "Results review",
     icon: FileText,
-  },
-  {
-    slug: "account",
-    title: "Workspace & Account",
-    label: "Workspace",
-    description: "Manage workspace settings, teammates, profile, notifications, and usage.",
-    intent: "Administration",
-    icon: Settings,
   },
 ] as const;
 
@@ -104,11 +77,9 @@ export function getCollectionForUrl(
 export function getPopularArticles(pages: HelpArticle[]) {
   const preferredUrls = [
     "/start/quickstart",
-    "/create",
-    "/contacts/segments",
-    "/share",
+    "/create/smart-builder",
+    "/create/follow-up-depth",
     "/analyze",
-    "/account/credits-and-usage",
   ];
 
   return preferredUrls
@@ -132,9 +103,9 @@ export function HelpHeader({
           aria-label="Lemma Help Center"
         >
           <img
-            src="/assets/logo-black.png"
+            src="/favicon.png"
             alt=""
-            className="h-4 w-auto shrink-0"
+            className="h-6 w-6 shrink-0 rounded-sm"
             aria-hidden="true"
           />
           <span className="hidden sm:inline">Help Center</span>
@@ -205,8 +176,7 @@ export function HelpFooter() {
         <div>
           <div className="font-semibold text-[#0a0a0a]">Lemma Help Center</div>
           <p className="mt-1 max-w-xl">
-            Practical guidance for designing, launching, and understanding
-            adaptive AI studies.
+            Practical guidance for creating studies and reviewing results.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -256,12 +226,12 @@ export function HelpHome({
               Lemma Help Center
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-normal text-[#0a0a0a] md:text-5xl">
-              What are you trying to do in Lemma?
+              Help with creating studies and reviewing results
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#525252]">
-              Find practical answers for designing adaptive studies, inviting
-              participants, collecting responses, and turning evidence into
-              decisions.
+              Learn how to create an adaptive study in text or voice, guide the
+              follow-up questions, and review responses, transcripts, Insights,
+              and Research.
             </p>
             <div className="mt-8">
               <HelpSearchButton />
@@ -275,8 +245,8 @@ export function HelpHome({
               className="block w-full"
             />
             <div className="border-t border-[#ece9e2] px-4 py-3 text-sm text-[#686861]">
-              The Studies dashboard is the home base for creating, opening, and
-              managing Lemma studies.
+              The Studies dashboard is where your studies live after you create
+              them.
             </div>
           </div>
         </div>
@@ -286,11 +256,11 @@ export function HelpHome({
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-2xl font-semibold text-[#0a0a0a]">
-              Browse by job
+              Browse by collection
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-7 text-[#686861]">
-              The docs are organized around what a self-serve user is trying to
-              accomplish, not around an internal feature list.
+              Start with the basics, then open the guide that matches what you
+              are doing in Lemma.
             </p>
           </div>
         </div>
@@ -317,12 +287,13 @@ export function HelpHome({
           <div className="rounded-lg border border-[#dfe4ff] bg-[#f7f8ff] p-5">
             <div className="flex items-center gap-2 text-sm font-semibold text-[#2436d9]">
               <CheckCircle2 aria-hidden="true" className="h-4 w-4" />
-              Best first workflow
+              Fastest path to value
             </div>
             <p className="mt-3 text-sm leading-6 text-[#283044]">
-              Start with a small text or voice study, send the respondent-facing
-              link to a few people, then review responses before scaling the
-              audience.
+              Describe what you want to learn in the smart builder, or start
+              from a template in the New Study screen. Lemma can draft the study
+              context, starter questions, and follow-up guidance so you can
+              refine instead of starting from a blank page.
             </p>
             <Link
               href="/start/quickstart"
@@ -352,9 +323,17 @@ export function HelpArticleShell({
   const collectionArticles =
     collection?.articles.filter((article) => article.url !== collection.url) ??
     [];
-  const relatedCollectionArticles = collectionArticles.filter(
-    (article) => article.url !== page.url,
-  );
+  const collectionNavItems = collection
+    ? [
+        {
+          title: "Overview",
+          description: collection.description,
+          url: collection.url,
+          slugs: [collection.slug],
+        },
+        ...collectionArticles,
+      ]
+    : [];
   const isCollectionIndex = collection?.url === page.url;
   const CollectionIcon = collection?.icon;
 
@@ -372,9 +351,30 @@ export function HelpArticleShell({
             {collection ? (
               <>
                 <ChevronRight aria-hidden="true" className="h-4 w-4" />
-                <Link href={collection.url} className="hover:text-[#0a0a0a]">
-                  {collection.title}
-                </Link>
+                {isCollectionIndex ? (
+                  <span
+                    aria-current="page"
+                    className="font-medium text-[#0a0a0a]"
+                  >
+                    {collection.title}
+                  </span>
+                ) : (
+                  <>
+                    <Link
+                      href={collection.url}
+                      className="hover:text-[#0a0a0a]"
+                    >
+                      {collection.title}
+                    </Link>
+                    <ChevronRight aria-hidden="true" className="h-4 w-4" />
+                    <span
+                      aria-current="page"
+                      className="line-clamp-1 font-medium text-[#0a0a0a]"
+                    >
+                      {page.title}
+                    </span>
+                  </>
+                )}
               </>
             ) : null}
           </nav>
@@ -396,19 +396,6 @@ export function HelpArticleShell({
             ) : null}
           </div>
 
-          {isCollectionIndex && collectionArticles.length > 0 ? (
-            <section className="my-8 rounded-lg border border-[#e6e3dd] bg-[#fbfbf8] p-5">
-              <h2 className="text-base font-semibold text-[#0a0a0a]">
-                Articles in this collection
-              </h2>
-              <div className="mt-4 grid gap-2">
-                {collectionArticles.map((article) => (
-                  <ArticleListLink key={article.url} article={article} />
-                ))}
-              </div>
-            </section>
-          ) : null}
-
           <article className="lemma-article py-8">{children}</article>
 
           <ArticleFeedback collection={collection} />
@@ -417,23 +404,31 @@ export function HelpArticleShell({
         <aside className="hidden lg:block">
           <div className="sticky top-24 space-y-6">
             <HelpSearchButton compact className="w-full" />
-            {collection &&
-            !isCollectionIndex &&
-            relatedCollectionArticles.length > 0 ? (
+            {collection && collectionNavItems.length > 0 ? (
               <div className="rounded-lg border border-[#e6e3dd] bg-white p-4">
                 <div className="text-xs font-semibold uppercase tracking-[0.12em] text-[#8a8a8a]">
-                  More in {collection.label}
+                  In this collection
                 </div>
                 <nav className="mt-3 space-y-1" aria-label={collection.title}>
-                  {relatedCollectionArticles.map((article) => (
-                    <Link
-                      key={article.url}
-                      href={article.url}
-                      className="block rounded-lg px-3 py-2 text-sm leading-5 text-[#686861] transition hover:bg-[#fbfbf8] hover:text-[#0a0a0a]"
-                    >
-                      {article.title}
-                    </Link>
-                  ))}
+                  {collectionNavItems.map((article) => {
+                    const isActive = article.url === page.url;
+
+                    return (
+                      <Link
+                        key={article.url}
+                        href={article.url}
+                        aria-current={isActive ? "page" : undefined}
+                        className={[
+                          "block rounded-md px-3 py-2 text-sm leading-5 transition",
+                          isActive
+                            ? "bg-[#f1f2ff] font-semibold text-[#2436d9]"
+                            : "text-[#686861] hover:bg-[#fbfbf8] hover:text-[#0a0a0a]",
+                        ].join(" ")}
+                      >
+                        {article.title}
+                      </Link>
+                    );
+                  })}
                 </nav>
               </div>
             ) : null}
@@ -473,7 +468,7 @@ function CollectionCard({ collection }: { collection: HelpCollection }) {
   return (
     <Link
       href={collection.url}
-      className="group flex min-h-44 flex-col rounded-lg border border-[#e6e3dd] bg-white p-5 text-left shadow-sm transition hover:border-[#3d50ff] hover:shadow-md"
+      className="group flex min-h-40 flex-col rounded-lg border border-[#e6e3dd] bg-white p-5 text-left shadow-sm transition hover:border-[#3d50ff] hover:shadow-md"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#f1f2ff] text-[#2436d9]">
@@ -487,15 +482,14 @@ function CollectionCard({ collection }: { collection: HelpCollection }) {
       <div className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-[#8a8a8a]">
         {collection.intent}
       </div>
-      <h3 className="mt-2 text-lg font-semibold text-[#0a0a0a]">
+      <h3 className="mt-2 text-lg font-semibold leading-6 text-[#0a0a0a]">
         {collection.title}
       </h3>
-      <p className="mt-2 flex-1 text-sm leading-6 text-[#686861]">
+      <p className="mt-2 flex-1 text-sm leading-5 text-[#686861]">
         {collection.description}
       </p>
       <div className="mt-4 text-sm font-semibold text-[#2436d9]">
-        {collection.articles.length}{" "}
-        {collection.articles.length === 1 ? "article" : "articles"}
+        Open collection
       </div>
     </Link>
   );
@@ -505,14 +499,14 @@ function ArticleListLink({ article }: { article: HelpArticle }) {
   return (
     <Link
       href={article.url}
-      className="group flex items-start justify-between gap-4 rounded-lg border border-[#e6e3dd] bg-white p-4 transition hover:border-[#3d50ff]"
+      className="group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 rounded-lg border border-[#e6e3dd] bg-white p-4 transition hover:border-[#3d50ff]"
     >
       <span>
-        <span className="block text-sm font-semibold leading-5 text-[#0a0a0a]">
+        <span className="block text-[15px] font-semibold leading-5 text-[#0a0a0a]">
           {article.title}
         </span>
         {article.description ? (
-          <span className="mt-1 block text-sm leading-6 text-[#686861]">
+          <span className="mt-1.5 block text-sm leading-5 text-[#686861]">
             {article.description}
           </span>
         ) : null}

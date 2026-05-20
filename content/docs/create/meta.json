@@ -1,5 +1,13 @@
 {
-  "title": "Designing Studies",
+  "title": "Creating Studies",
   "defaultOpen": true,
-  "pages": ["index"]
+  "pages": [
+    "index",
+    "smart-builder",
+    "text-or-voice",
+    "follow-up-depth",
+    "questions-and-follow-ups",
+    "templates",
+    "test-study"
+  ]
 }
