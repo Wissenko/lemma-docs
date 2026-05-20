@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import type { TableOfContents } from "fumadocs-core/toc";
 import { HelpSearchButton } from "@/components/help-search";
+import { TrackedAnchor } from "@/components/tracked-anchor";
 
 export type HelpArticle = {
   title: string;
@@ -161,12 +162,18 @@ export function HelpHeader({
 
         <div className="ml-auto hidden shrink-0 items-center gap-3 md:flex">
           <HelpSearchButton compact />
-          <a
+          <TrackedAnchor
             href="https://app.heylemma.com"
+            event="docs_open_app_click"
+            eventProps={{
+              cta_id: "docs_header_open_app",
+              cta_text: "Open app",
+              location: "header",
+            }}
             className="rounded-lg bg-[#0a0a0a] px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-[#2b2b2b]"
           >
             Open app
-          </a>
+          </TrackedAnchor>
         </div>
       </div>
       <div className="border-t border-[#f0eee8] px-5 py-2 lg:hidden">
@@ -203,12 +210,30 @@ export function HelpFooter() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <a className="hover:text-[#0a0a0a]" href="https://heylemma.com">
+          <TrackedAnchor
+            className="hover:text-[#0a0a0a]"
+            href="https://heylemma.com"
+            event="docs_footer_product_click"
+            eventProps={{
+              cta_id: "docs_footer_product",
+              cta_text: "Product",
+              location: "footer",
+            }}
+          >
             Product
-          </a>
-          <a className="hover:text-[#0a0a0a]" href="https://app.heylemma.com">
+          </TrackedAnchor>
+          <TrackedAnchor
+            className="hover:text-[#0a0a0a]"
+            href="https://app.heylemma.com"
+            event="docs_footer_app_click"
+            eventProps={{
+              cta_id: "docs_footer_app",
+              cta_text: "App",
+              location: "footer",
+            }}
+          >
             App
-          </a>
+          </TrackedAnchor>
         </div>
       </div>
     </footer>
